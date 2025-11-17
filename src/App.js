@@ -16,8 +16,6 @@ function App() {
           rel="noopener noreferrer"
         >
           <p>adding new pragraph </p>
-          <h4>git new commit</h4>
-          <p>added the next commit</p>
         </a>
       </header>
     </div>
