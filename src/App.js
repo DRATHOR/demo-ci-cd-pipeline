@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Greeting from './Greeting';
+import AccountHOC from './AccountHOC';
+import UserAccount from './UserAccount';
+
+const UserAccountWrapper = AccountHOC(UserAccount);
 
 function App() {
+  const a = new AbortController();
+  console.log({ a });
+  console.log(<Greeting />);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>adding new pragraph </p>
-        </a>
-      </header>
-    </div>
+    <>
+      hellow
+      <UserAccountWrapper id={1} name={'devendra'} email={'dev@gamil.com'} />
+    </>
   );
 }
 
