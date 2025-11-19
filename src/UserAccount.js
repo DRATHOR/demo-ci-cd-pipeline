@@ -1,11 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const UserAccount = (props) => {
-  const user = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-  };
-
   console.log('User Account Prop::');
 
   return (

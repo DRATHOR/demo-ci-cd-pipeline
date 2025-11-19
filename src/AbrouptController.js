@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function User({ id }) {
   const [user, setUser] = useState(null);
