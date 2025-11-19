@@ -1,10 +1,28 @@
-name: workflow-first
-on: workflow_dispatch
+name: ESLint Check
+
+on:
+  push:
+    branches: ['main', 'master', 'dev', 'qa', '**']
+  pull_request:
+    branches: ['main', 'master', '**']
+
 jobs:
-  first_job:
+  lint:
+    name: Run ESLint
     runs-on: ubuntu-latest
+
     steps:
-      - name: print greeting
-        run: echo "hello world!"
-      - name: print good buy
-        run: echo "done"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.5'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
