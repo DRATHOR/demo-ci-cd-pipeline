@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/* eslint-disable react/react-in-jsx-scope */
 import './App.css';
 import Greeting from './Greeting';
 import AccountHOC from './AccountHOC';
